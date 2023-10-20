@@ -42,4 +42,4 @@ function startCalc() {
   })
 }  
 
-export {startCalc}
+export { startCalc }
