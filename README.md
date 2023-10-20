@@ -10,3 +10,4 @@ My fist project at <a href='https://ru.hexlet.io/'>Hexlet</a> course for Fronten
 ### Asciinema
 <a href='https://asciinema.org/a/rb5STaIcyhNl1PdMhZDPoMLwe'>First game</a>
 <a href='https://asciinema.org/a/eS8Rghr1WfPiFW53f3v5GLTgK'>Second game</a>
+<a href='https://asciinema.org/a/oz8TaECqG9eXeFZlPu7zTH1LC'>Third game</a>
