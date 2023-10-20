@@ -2,7 +2,7 @@ Hi! There is my fist project at <a href='https://ru.hexlet.io/'>Hexlet</a> cours
 
 This is a repository with five games that run on the command line! To install the game, enter 'make install' in the console, then 'make publish'. There are 5 available games in the 'bin' directory, to start each of them, you need to enter the name of the game in the make + console, for example: 'make brain-calc'. To win each of the games, you must answer 3 questions correctly in a row. 
 
-Good luck and may the strongest win!
+🎊 Good luck and may the strongest win! 🎊
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/SafAlyona/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/SafAlyona/frontend-project-44/actions)
