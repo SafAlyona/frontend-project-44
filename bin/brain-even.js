@@ -2,4 +2,3 @@
 import {startEven} from '../games/even.js';
 
 startEven()
-
