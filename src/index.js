@@ -26,7 +26,7 @@ export function win() {
 
 // вывод сообщения при неверном ответе 
 export function lose(answer, correct){
-  console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correct}".`)
+  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'.`)
   console.log(`Let's try again, ${store.name}!`)
 }
 
