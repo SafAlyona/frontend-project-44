@@ -12,8 +12,8 @@ This is a repository with five games that run on the command line! To install th
 <a href="https://codeclimate.com/github/SafAlyona/frontend-project-44/test_coverage"><img src="https://api.codeclimate.com/v1/badges/fb83d38a0c1de4129309/test_coverage" /></a>
 
 ### Asciinema
-<a href='https://asciinema.org/a/rb5STaIcyhNl1PdMhZDPoMLwe'>First game</a>
-<a href='https://asciinema.org/a/eS8Rghr1WfPiFW53f3v5GLTgK'>Second game</a>
-<a href='https://asciinema.org/a/oz8TaECqG9eXeFZlPu7zTH1LC'>Third game</a>
-<a href='https://asciinema.org/a/fjOfsB0G4X4RprcBefh6ZVkzv'>Fourth game</a>
-<a href='https://asciinema.org/a/uQoCZn9BN6XeFP784fLC66zLh'>Fifth game</a>
+<a href='https://asciinema.org/a/UBMzoImMmjr5vc8m8VxyljMUs'>First game 'Parity check'</a>
+<a href='https://asciinema.org/a/TPCtdb4eJUsW1Ep9ixbiXbBUX'>Second game 'Calculator'</a>
+<a href='https://asciinema.org/a/YkTBSWVyoO1bGgh5sBZgEQyel'>Third game 'The Least Common Multiple (LCM)'</a>
+<a href='https://asciinema.org/a/ssdm9eMy7bYUdj8XeG0afNLC0'>Fourth game 'Arithmetic progression'</a>
+<a href='https://asciinema.org/a/TCmYwwUQKIQvb140IjKW2wS54'>Fifth game 'Is it a prime number?'</a>

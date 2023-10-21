@@ -14,9 +14,10 @@ export function loop(generatePairs) {
     if(correctPairs(generatePairs())){
       i += 1
     } else {
-      i = 0
+      return false
     }
   }
+  return true
 }
 
 // вывод сообщения при победе в игре
@@ -50,6 +51,7 @@ export function game({
 }){
   hello()
   console.log(rules)
-  loop(generatePairs)
-  win()
+  if (loop(generatePairs) === true){
+    win()
+  }
 }
