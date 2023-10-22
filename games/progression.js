@@ -20,12 +20,12 @@ function progressionPairs() {
     progression.push(randomStep * i + randomStart)
   }
 
-  let correctHiddenNumber = progression[randomIndexOfHiddenNumber]
+  let correctHiddenNumber = progression[randomIndexOfHiddenNumber].toString()
   progression[randomIndexOfHiddenNumber] = '..'
 
   return {
     question: progression.join(' '),
-    correct: correctHiddenNumber.toString()
+    correct: correctHiddenNumber
   }
 }
 
