@@ -9,7 +9,6 @@ This is a repository with five games that run on the command line! To install th
 
 ### Bages from CodeClimate
 <a href="https://codeclimate.com/github/SafAlyona/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/fb83d38a0c1de4129309/maintainability" /></a>
-<a href="https://codeclimate.com/github/SafAlyona/frontend-project-44/test_coverage"><img src="https://api.codeclimate.com/v1/badges/fb83d38a0c1de4129309/test_coverage" /></a>
 
 ### Asciinema
 <a href='https://asciinema.org/a/UBMzoImMmjr5vc8m8VxyljMUs'>First game 'Parity check'</a>
