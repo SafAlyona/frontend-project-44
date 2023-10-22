@@ -1,3 +1,3 @@
-export const store = {
-  name: '',
+export default {
+	name: '',
 };

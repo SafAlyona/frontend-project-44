@@ -1,3 +1,3 @@
 import { hello } from './index.js';
 
-export { hello };
+export default hello;
