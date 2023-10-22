@@ -1,4 +1,3 @@
 export const store = {
-  name: ''
-}
-
+	name: '',
+};
