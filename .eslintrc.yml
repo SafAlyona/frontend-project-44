@@ -16,8 +16,7 @@ rules:
   import/extensions: 0
     - error
     - ignorePackages
-    - js: always
-  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
+  no-underscore-dangle: [2, { 'allow': ['__filename', '__dirname'] }]
   indent:
     - error
     - tab
