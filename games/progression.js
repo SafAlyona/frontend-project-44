@@ -10,7 +10,7 @@ function progressionPairs() {
   // генерирует рандомную длину прогрессии, которая по условию не может быть меньше 5
   const randomLengthOfProgression = Math.max(Math.round(Math.random() * 10), 5)
   // генерирует рандомный индекс скрытого элемента
-  const randomIndexOfHiddenNumber = Math.min(Math.round(Math.random() * randomLengthOfProgression), randomLengthOfProgression)
+  const randomIndexOfHiddenNumber = Math.min(Math.round(Math.random() * (randomLengthOfProgression - 1)), randomLengthOfProgression - 1)
   // генерирует рандомное стартовое число в прогрессии
   const randomStart = Math.round(Math.random() * 5)
   const progression = []
@@ -20,7 +20,7 @@ function progressionPairs() {
     progression.push(randomStep * i + randomStart)
   }
 
-  let correctHiddenNumber = progression[randomIndexOfHiddenNumber].toString()
+  const correctHiddenNumber = progression[randomIndexOfHiddenNumber].toString()
   progression[randomIndexOfHiddenNumber] = '..'
 
   return {
