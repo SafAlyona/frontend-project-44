@@ -57,7 +57,7 @@ export function game({ rule = '', generatePairs }) {
 
 // генерация рандомного числа
 export function getRandomArbitrary(min = 1, max = 100) {
-  return Math.random() * (max - min) + min;
+  return Math.ceil(Math.random() * (max - min) + min);
 }
 
 // проверка на четность числа
