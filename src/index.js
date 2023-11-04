@@ -1,24 +1,25 @@
 import readlineSync from 'readline-sync';
-import store from './store.js';
 
 // вывод приветствия
 export function hello() {
   console.log('Welcome to the Brain Games!');
-  store.name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${store.name}!`);
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+
+  return name;
 }
 
 // вывод сообщения при победе в игре
-export function ifUserWin() {
-  console.log(`Congratulations, ${store.name}!`);
+export function winMessage(name) {
+  console.log(`Congratulations, ${name}!`);
 }
 
 // вывод сообщения при неверном ответе
-export function ifUserLose(answer, correct) {
+export function loseMessage(answer, correct, name) {
   console.log(
     `'${answer}' is wrong answer ;(. Correct answer was '${correct}'.`,
   );
-  console.log(`Let's try again, ${store.name}!`);
+  console.log(`Let's try again, ${name}!`);
 }
 
 // проверка ответа пользователя на корректность, сравнивает с правильным ответом
@@ -29,7 +30,7 @@ export function correctPairs({ question, correct }) {
     console.log('Correct!');
     return true;
   }
-  ifUserLose(answer, correct);
+  loseMessage(answer, correct);
   return false;
 }
 
@@ -51,7 +52,7 @@ export function game({ rule = '', generatePairs }) {
   hello();
   console.log(rule);
   if (loop(generatePairs)) {
-    ifUserWin();
+    winMessage();
   }
 }
 
