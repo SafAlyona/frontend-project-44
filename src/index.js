@@ -11,7 +11,7 @@ export function hello() {
 
 // вывод сообщения при победе в игре
 export function winMessage(name) {
-  console.log(`Congratulations, ${name}!`);
+  console.log(`Congratulations, ${hello(name)}!`);
 }
 
 // вывод сообщения при неверном ответе
@@ -19,7 +19,7 @@ export function loseMessage(answer, correct, name) {
   console.log(
     `'${answer}' is wrong answer ;(. Correct answer was '${correct}'.`,
   );
-  console.log(`Let's try again, ${name}!`);
+  console.log(`Let's try again, ${hello(name)}!`);
 }
 
 // проверка ответа пользователя на корректность, сравнивает с правильным ответом
