@@ -1,16 +1,19 @@
-import { game } from '../src/index.js';
+import { game, getRandomArbitrary } from '../index.js';
 
 // функция формирования пары вопрос + верный ответ
 function calcPairs() {
   const operations = ['*', '+', '-'];
-  const firstGeneratedNumber = Math.ceil(Math.random() * 100);
-  const secondGeneratedNumber = Math.ceil(Math.random() * 100);
-  const randomIndex = Math.round(Math.random() * (operations.length - 1));
+
+  const firstGeneratedNumber = getRandomArbitrary();
+  const secondGeneratedNumber = getRandomArbitrary();
+  const randomIndex = getRandomArbitrary(0, operations.length - 1);
 
   let value = 0;
   let randomExpression = '';
 
-  switch (operations[randomIndex]) {
+  const choosenOperator = operations[randomIndex];
+
+  switch (choosenOperator) {
     case '*':
       value = firstGeneratedNumber * secondGeneratedNumber;
       randomExpression = `${firstGeneratedNumber} * ${secondGeneratedNumber}`;

@@ -1,19 +1,19 @@
-import { game } from '../src/index.js';
+import { game, getRandomArbitrary } from '../index.js';
 
-function nod(a, b) {
+function gcd(a, b) {
   if (b !== 0) {
     const k = a % b;
-    return nod(b, k);
+    return gcd(b, k);
   }
   return a;
 }
 
 function gcdPairs() {
-  const firstGeneratedNumber = Math.ceil(Math.random() * 100);
-  const secondGeneratedNumber = Math.ceil(Math.random() * 100);
+  const firstGeneratedNumber = getRandomArbitrary();
+  const secondGeneratedNumber = getRandomArbitrary();
   const expression = `${firstGeneratedNumber} ${secondGeneratedNumber}`;
 
-  const greatestCommonDivisor = nod(
+  const greatestCommonDivisor = gcd(
     firstGeneratedNumber,
     secondGeneratedNumber,
   );

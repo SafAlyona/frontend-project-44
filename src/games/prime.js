@@ -1,16 +1,9 @@
-import { game } from '../src/index.js';
-
-function isPrime(number) {
-  for (let i = 2; i < number; i += 1) {
-    if (number % i === 0) return 'no';
-  }
-  return 'yes';
-}
+import { game, getRandomArbitrary, isPrime } from '../index.js';
 
 // функция формирования пары вопрос + верный ответ
 function primePairs() {
-  const randomNumber = Math.max(Math.round(Math.random() * 100), 2);
-  const rigthAnswer = isPrime(randomNumber);
+  const randomNumber = getRandomArbitrary(2);
+  const rigthAnswer = isPrime(randomNumber) ? 'yes' : 'no';
 
   return {
     question: randomNumber.toString(),

@@ -1,17 +1,12 @@
-import { game } from '../src/index.js';
+import { game, getRandomArbitrary, isEven } from '../index.js';
 
 // функция формирования пары вопрос + верный ответ
 function evenPairs() {
-  const randomNumber = Math.max(Math.ceil(Math.random() * 10), 1);
-  let isNumberEven = 'no';
-
-  if (randomNumber % 2 === 0) {
-    isNumberEven = 'yes';
-  }
+  const randomNumber = getRandomArbitrary();
 
   return {
     question: randomNumber,
-    correct: isNumberEven,
+    correct: isEven(randomNumber) ? 'yes' : 'no',
   };
 }
 
