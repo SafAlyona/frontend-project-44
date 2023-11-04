@@ -35,7 +35,7 @@ function progressionPairs() {
 // основная функция
 function startProgression() {
   game({
-    rules: 'What number is missing in the progression?',
+    rule: 'What number is missing in the progression?',
     generatePairs: progressionPairs,
   });
 }

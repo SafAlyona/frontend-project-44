@@ -41,7 +41,7 @@ function calcPairs() {
 // основная функция
 function startCalc() {
   game({
-    rules: 'What is the result of the expression?',
+    rule: 'What is the result of the expression?',
     generatePairs: calcPairs,
   });
 }

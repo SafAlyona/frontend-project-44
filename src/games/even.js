@@ -13,7 +13,7 @@ function evenPairs() {
 // основная функция
 function startEven() {
   game({
-    rules: 'Answer "yes" if the number is even, otherwise answer "no".',
+    rule: 'Answer "yes" if the number is even, otherwise answer "no".',
     generatePairs: evenPairs,
   });
 }

@@ -9,12 +9,12 @@ export function hello() {
 }
 
 // вывод сообщения при победе в игре
-export function win() {
+export function ifUserWin() {
   console.log(`Congratulations, ${store.name}!`);
 }
 
 // вывод сообщения при неверном ответе
-export function lose(answer, correct) {
+export function ifUserLose(answer, correct) {
   console.log(
     `'${answer}' is wrong answer ;(. Correct answer was '${correct}'.`,
   );
@@ -29,13 +29,14 @@ export function correctPairs({ question, correct }) {
     console.log('Correct!');
     return true;
   }
-  lose(answer, correct);
+  ifUserLose(answer, correct);
   return false;
 }
 
 // цикл проигрывания вопроса до 3х правильных ответов
 export function loop(generatePairs) {
-  for (let i = 0; i < 3;) {
+  let i = 0;
+  while (i < 3) {
     if (correctPairs(generatePairs())) {
       i += 1;
     } else {
@@ -50,7 +51,7 @@ export function game({ rule = '', generatePairs }) {
   hello();
   console.log(rule);
   if (loop(generatePairs)) {
-    win();
+    ifUserWin();
   }
 }
 

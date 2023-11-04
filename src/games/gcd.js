@@ -27,7 +27,7 @@ function gcdPairs() {
 // основная функция
 function startGcd() {
   game({
-    rules: 'Find the greatest common divisor of given numbers.',
+    rule: 'Find the greatest common divisor of given numbers.',
     generatePairs: gcdPairs,
   });
 }
