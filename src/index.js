@@ -5,13 +5,12 @@ export function hello() {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-
   return name;
 }
 
 // вывод сообщения при победе в игре
 export function winMessage(name) {
-  console.log(`Congratulations, ${hello(name)}!`);
+  console.log(`Congratulations, ${name}!`);
 }
 
 // вывод сообщения при неверном ответе
@@ -19,26 +18,26 @@ export function loseMessage(answer, correct, name) {
   console.log(
     `'${answer}' is wrong answer ;(. Correct answer was '${correct}'.`,
   );
-  console.log(`Let's try again, ${hello(name)}!`);
+  console.log(`Let's try again, ${name}!`);
 }
 
 // проверка ответа пользователя на корректность, сравнивает с правильным ответом
-export function correctPairs({ question, correct }) {
+export function correctPairs({ question, correct, name }) {
   console.log(`Question: ${question}`);
   const answer = readlineSync.question('Your answer: ');
   if (answer === correct) {
     console.log('Correct!');
     return true;
   }
-  loseMessage(answer, correct);
+  loseMessage(answer, correct, name);
   return false;
 }
 
 // цикл проигрывания вопроса до 3х правильных ответов
-export function loop(generatePairs) {
+export function loop(generatePairs, name) {
   let i = 0;
   while (i < 3) {
-    if (correctPairs(generatePairs())) {
+    if (correctPairs({ ...generatePairs(), name })) {
       i += 1;
     } else {
       return false;
@@ -49,11 +48,12 @@ export function loop(generatePairs) {
 
 // основная функция - сборка игры
 export function game({ rule = '', generatePairs }) {
-  hello();
+  const name = hello();
   console.log(rule);
-  if (loop(generatePairs)) {
-    winMessage();
+  if (loop(generatePairs, name)) {
+    winMessage(name);
   }
+  return false;
 }
 
 // генерация рандомного числа
