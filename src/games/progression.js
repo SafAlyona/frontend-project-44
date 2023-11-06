@@ -23,7 +23,7 @@ function generateRandomIndex() {
   const maxLength = 10;
   const randomLengthOfProgression = getRandomArbitrary(minLength, maxLength);
   // генерирует рандомный индекс скрытого элемента
-  const randomIndexOfHiddenNumber = Math.min(Math.round(Math.random() * (randomLengthOfProgression - 1)), randomLengthOfProgression - 1);
+  const randomIndexOfHiddenNumber = Math.floor(Math.random() * randomLengthOfProgression) - 1;
   return randomIndexOfHiddenNumber;
 }
 
