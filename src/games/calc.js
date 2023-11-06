@@ -1,36 +1,34 @@
 import { game, getRandomArbitrary } from '../index.js';
 
-// функция формирования пары вопрос + верный ответ
-function calcPairs() {
-  const operations = ['*', '+', '-'];
+let value = 0;
 
-  const firstGeneratedNumber = getRandomArbitrary();
-  const secondGeneratedNumber = getRandomArbitrary();
-  const randomIndex = getRandomArbitrary(0, operations.length - 1);
-
-  let value = 0;
-  let randomExpression = '';
-
-  const choosenOperator = operations[randomIndex];
-
+function generatingValuePair(choosenOperator, firstGeneratedNumber, secondGeneratedNumber) {
   switch (choosenOperator) {
     case '*':
       value = firstGeneratedNumber * secondGeneratedNumber;
-      randomExpression = `${firstGeneratedNumber} * ${secondGeneratedNumber}`;
       break;
-
     case '+':
       value = firstGeneratedNumber + secondGeneratedNumber;
-      randomExpression = `${firstGeneratedNumber} + ${secondGeneratedNumber}`;
       break;
-
     case '-':
       value = firstGeneratedNumber - secondGeneratedNumber;
-      randomExpression = `${firstGeneratedNumber} - ${secondGeneratedNumber}`;
       break;
     default:
       break;
   }
+  return value;
+}
+
+// функция формирования пары вопрос + верный ответ
+function calcPairs() {
+  const operations = ['*', '+', '-'];
+  const firstGeneratedNumber = getRandomArbitrary();
+  const secondGeneratedNumber = getRandomArbitrary();
+  const randomIndex = getRandomArbitrary(0, operations.length - 1);
+  const choosenOperator = operations[randomIndex];
+
+  generatingValuePair(choosenOperator, firstGeneratedNumber, secondGeneratedNumber);
+  const randomExpression = `${firstGeneratedNumber} ${choosenOperator} ${secondGeneratedNumber}`;
 
   return {
     question: randomExpression,

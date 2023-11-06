@@ -1,4 +1,9 @@
-import { game, getRandomArbitrary, isEven } from '../index.js';
+import { game, getRandomArbitrary } from '../index.js';
+
+// проверка на четность числа
+function isEven(num) {
+  return num % 2 === 0;
+}
 
 // функция формирования пары вопрос + верный ответ
 function evenPairs() {

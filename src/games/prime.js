@@ -2,7 +2,8 @@ import { game, getRandomArbitrary, isPrime } from '../index.js';
 
 // функция формирования пары вопрос + верный ответ
 function primePairs() {
-  const randomNumber = getRandomArbitrary(2);
+  const minNumber = 2;
+  const randomNumber = getRandomArbitrary(minNumber);
   const rigthAnswer = isPrime(randomNumber) ? 'yes' : 'no';
 
   return {
