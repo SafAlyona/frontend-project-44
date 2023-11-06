@@ -24,7 +24,7 @@ function progressionPairs() {
   const progression = generateProgression();
   const randomIndexOfHiddenNumber = generateRandomIndex();
   const correctHiddenNumber = progression[randomIndexOfHiddenNumber];
-  progression[randomIndexOfHiddenNumber] = '...';
+  progression[randomIndexOfHiddenNumber] = '..';
   return {
     question: progression.join(' '),
     correct: String(correctHiddenNumber),
