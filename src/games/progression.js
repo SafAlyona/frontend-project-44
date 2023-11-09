@@ -11,7 +11,7 @@ function generateProgression() {
   const randomStep = Math.max(getRandomArbitrary(0, 1) * paskhalka, 1);
   const randomStart = Math.round(Math.random() * 5);
   const progression = [];
-  for (let i = 0; i < randomLengthOfProgression(); i += 1) {
+  for (let i = 0; i < randomLengthOfProgression() - 1; i += 1) {
     progression.push(randomStep * i + randomStart);
   }
   return progression;
