@@ -60,11 +60,3 @@ export function game({ rule = '', generatePairs }) {
 export function getRandomArbitrary(min = 1, max = 100) {
   return Math.ceil(Math.random() * (max - min) + min);
 }
-
-// проверка простое ли число
-export function isPrime(num) {
-  for (let i = 2; i < num; i += 1) {
-    if (num % i === 0) return false;
-  }
-  return num !== 1;
-}

@@ -20,7 +20,7 @@ function gcdPairs() {
 
   return {
     question: expression,
-    correct: greatestCommonDivisor.toString(),
+    correct: String(greatestCommonDivisor),
   };
 }
 

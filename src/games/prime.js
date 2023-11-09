@@ -1,4 +1,12 @@
-import { game, getRandomArbitrary, isPrime } from '../index.js';
+import { game, getRandomArbitrary } from '../index.js';
+
+// проверка простое ли число
+function isPrime(num) {
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) return false;
+  }
+  return num !== 1;
+}
 
 // функция формирования пары вопрос + верный ответ
 function primePairs() {
@@ -7,7 +15,7 @@ function primePairs() {
   const rigthAnswer = isPrime(randomNumber) ? 'yes' : 'no';
 
   return {
-    question: randomNumber.toString(),
+    question: String(randomNumber),
     correct: rigthAnswer,
   };
 }

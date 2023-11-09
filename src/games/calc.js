@@ -8,8 +8,7 @@ function generatingValuePair(choosenOperator, firstGeneratedNumber, secondGenera
       return String(firstGeneratedNumber + secondGeneratedNumber);
     case '-':
       return String(firstGeneratedNumber - secondGeneratedNumber);
-    default:
-      break;
+    default: throw new Error(`Unknown order state: '${choosenOperator}'!`);
   }
 }
 
@@ -21,12 +20,12 @@ function calcPairs() {
   const randomIndex = getRandomArbitrary(0, operations.length - 1);
   const choosenOperator = operations[randomIndex];
 
-  const correctValue = generatingValuePair(choosenOperator, firstGeneratedNumber, secondGeneratedNumber);
+  const value = generatingValuePair(choosenOperator, firstGeneratedNumber, secondGeneratedNumber);
   const randomExpression = `${firstGeneratedNumber} ${choosenOperator} ${secondGeneratedNumber}`;
 
   return {
     question: randomExpression,
-    correct: correctValue,
+    correct: value,
   };
 }
 
