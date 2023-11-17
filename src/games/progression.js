@@ -18,11 +18,11 @@ function generateProgression(step = randomStep, start = randomStart) {
   return progression;
 }
 
-const generateRandomIndex = () => getRandomArbitrary(0, randomLengthOfProgression() - 1);
+const generateRandomIndex = (length) => getRandomArbitrary(0, length - 1);
 
 function progressionPairs() {
   const progression = generateProgression();
-  const randomIndexOfHiddenNumber = generateRandomIndex();
+  const randomIndexOfHiddenNumber = generateRandomIndex(progression.length);
   const correctHiddenNumber = progression[randomIndexOfHiddenNumber];
   progression[randomIndexOfHiddenNumber] = '..';
   return {
