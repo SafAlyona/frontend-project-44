@@ -1,18 +1,19 @@
 import { game, getRandomArbitrary } from '../index.js';
 
+const paskhalka = Math.round(Math.random() * (new Date().getDay() * 3));
+const randomStep = Math.max(getRandomArbitrary(0, 1) * paskhalka, 1);
+const randomStart = Math.round(Math.random() * 5);
+
 function randomLengthOfProgression() {
   const minLength = 5;
   const maxLength = 10;
   return getRandomArbitrary(minLength, maxLength);
 }
 
-function generateProgression() {
-  const paskhalka = Math.round(Math.random() * (new Date().getDay() * 3));
-  const randomStep = Math.max(getRandomArbitrary(0, 1) * paskhalka, 1);
-  const randomStart = Math.round(Math.random() * 5);
+function generateProgression(step = randomStep, start = randomStart) {
   const progression = [];
-  for (let i = 0; i < randomLengthOfProgression() - 1; i += 1) {
-    progression.push(randomStep * i + randomStart);
+  for (let i = 0; i < randomLengthOfProgression(); i += 1) {
+    progression.push(step * i + start);
   }
   return progression;
 }
